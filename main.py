@@ -7,6 +7,7 @@ from wtforms.validators import DataRequired
 import requests
 import os
 
+
 MOVIE_DB_API_KEY = "1cf2f6bad1b13bd43cadb1ebcc99fb76"
 MOVIE_DB_SEARCH_URL = "https://api.themoviedb.org/3/search/movie"
 MOVIE_DB_INFO_URL = "https://api.themoviedb.org/3/movie"
@@ -17,7 +18,7 @@ app.config['SECRET_KEY'] = "8BYkEfBA6O6donzWlSihBXox7C0sKR6b"
 Bootstrap(app)
 
 ##CREATE DB
-app.config['SQLALCHEMY_DATABASE_URI'] = os.getenv("DATABASE_URL",  "sqlite:///movies.db")
+app.config['SQLALCHEMY_DATABASE_URI'] = "postgres://ypswtgcbdhhryf:7c87d80ff31d58282f3a688bcb6af7342a03e73cb8ed18fdf6277f20930bc1b6@ec2-52-207-15-147.compute-1.amazonaws.com:5432/d1rv7g0ifra6ef"
 print(os.getenv("DATABASE_URL"))
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 db = SQLAlchemy(app)
