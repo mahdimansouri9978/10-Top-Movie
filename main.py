@@ -26,7 +26,7 @@ try:
 except:
     app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlit:///movies.db'
 
-print("DB URL!!!!", os.getenv("DATABASE_URL"))
+print("DB URL!!!!", prodURI)
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 db = SQLAlchemy(app)
 
