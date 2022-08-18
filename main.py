@@ -19,7 +19,7 @@ Bootstrap(app)
 
 ##CREATE DB
 app.config['SQLALCHEMY_DATABASE_URI'] = os.getenv("DATABASE_URL",  "sqlite:///movies.db")
-print(os.getenv("DATABASE_URL"))
+print("DB URL!!!!", os.getenv("DATABASE_URL"))
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 db = SQLAlchemy(app)
 
@@ -34,7 +34,7 @@ class Movie(db.Model):
     ranking = db.Column(db.Integer, nullable=True)
     review = db.Column(db.String(250), nullable=True)
     img_url = db.Column(db.String(250), nullable=False)
-db.create_all()
+# db.create_all()
 
 
 class FindMovieForm(FlaskForm):
