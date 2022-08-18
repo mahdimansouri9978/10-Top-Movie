@@ -24,7 +24,7 @@ try:
     app.config['SQLALCHEMY_DATABASE_URI'] = prodURI
 
 except:
-    app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlit:///movies.db'
+    app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///movies.db'
 
 print("DB URL!!!!", prodURI)
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
