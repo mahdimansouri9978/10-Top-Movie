@@ -34,7 +34,7 @@ class Movie(db.Model):
     ranking = db.Column(db.Integer, nullable=True)
     review = db.Column(db.String(250), nullable=True)
     img_url = db.Column(db.String(250), nullable=False)
-# db.create_all()
+db.create_all()
 
 
 class FindMovieForm(FlaskForm):
